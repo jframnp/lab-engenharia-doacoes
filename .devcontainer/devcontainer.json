@@ -1,0 +1,10 @@
+{
+  "name": "DPB - Doe Para O Bem",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
+  "postCreateCommand": "cd backend && npm install && cd ../frontend && npm install",
+  "forwardPorts": [5173, 3333],
+  "portsAttributes": {
+    "5173": { "label": "Front-end (React)", "onAutoForward": "openBrowser" },
+    "3333": { "label": "API (Express)", "onAutoForward": "silent" }
+  }
+}

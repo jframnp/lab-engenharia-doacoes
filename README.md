@@ -45,6 +45,15 @@ Mais detalhes em [`docs/arquitetura.md`](docs/arquitetura.md).
 
 ## Como rodar
 
+### No GitHub Codespaces (sem instalar nada)
+
+1. No repositório: **Code → Codespaces → Create codespace on main**. A instalação das dependências roda sozinha.
+2. Abra um terminal e rode `cd backend && npm run dev`.
+3. Abra um **segundo** terminal (botão `+`) e rode `cd frontend && npm run dev`.
+4. O navegador abre o front-end. Se não abrir: aba **Ports** → porta `5173` → ícone 🌐.
+
+### Na sua máquina
+
 Pré-requisito: **Node.js 18+**.
 
 ### 1. Back-end (API em `http://localhost:3333/api`)
