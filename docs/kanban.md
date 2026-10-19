@@ -30,7 +30,7 @@ Cada card abaixo vira uma *issue* com a label indicada. Os responsáveis são su
 |---|---|---|---|---|
 | 15 | Aprovação de ONGs pelo administrador (API + tela pronta; falta upload de documentos) | RF10 / UC13 | `backend` `frontend` | Felipe |
 | 16 | Notificações: hoje internas; falta envio por email | RF12 | `backend` | João |
-| 17 | Configurar CI no GitHub Actions rodando os testes | RNF07 | `chore` | Edson |
+| 17 | Pipeline Jenkins na EC2 (AWS) acionado por webhook do GitHub | RNF07 | `chore` | Edson |
 
 ## 📋 A fazer (Sprint 2)
 

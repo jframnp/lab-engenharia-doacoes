@@ -7,3 +7,5 @@ backend/uploads/
 .DS_Store
 .vscode/
 .idea/
+backend/reports/
+.node/

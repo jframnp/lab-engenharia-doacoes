@@ -93,6 +93,11 @@ cd backend
 npm test        # Jest + Supertest, com relatório de cobertura
 ```
 
+## CI/CD (Jenkins na AWS)
+
+Cada push na `main` dispara, via webhook do GitHub, o pipeline do [`Jenkinsfile`](Jenkinsfile), que roda em uma EC2 da AWS: testes do back-end (relatório JUnit) e build do front-end.
+Instruções de setup da instância, do job e do webhook: [`docs/jenkins.md`](docs/jenkins.md).
+
 ## Endpoints principais
 
 | Método | Rota | Quem | Descrição |
