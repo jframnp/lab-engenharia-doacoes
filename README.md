@@ -140,12 +140,10 @@ Instruções de setup da instância, do job e do webhook: [`docs/jenkins.md`](do
 
 O projeto foi desenvolvido com apoio de uma ferramenta de IA (Claude Code). Esta seção registra os prompts usados, na ordem em que foram enviados, para dar transparência ao processo.
 
-| # | Etapa | Prompt |
-|---|---|---|
-| 1 | _(ex.: Back-end)_ | _cole aqui o prompt_ |
-| 2 | _(ex.: Front-end)_ | _cole aqui o prompt_ |
-| 3 | _(ex.: Testes)_ | _cole aqui o prompt_ |
-| 4 | _(ex.: Jenkins / CI)_ | _cole aqui o prompt_ |
-| 5 | _(ex.: Codespaces)_ | _cole aqui o prompt_ |
-
-> Todo o código gerado foi revisado e testado pelo grupo antes do commit.
+| # | Etapa | Prompt (resumo) |
+|---|-------|-----------------|
+| 1 | **Back-end base + Arquitetura** | "Crie a estrutura inicial de um backend Node.js + Express seguindo arquitetura em camadas (Controller → Service → Repository). Use injeção de dependência via um `container.js`. Preciso de suporte a dois drivers de banco: `memory` (para desenvolvimento e testes) e `postgres`. Implemente autenticação com JWT + bcrypt. Explique cada camada e por que ela existe." |
+| 2 | **Casos de uso principais** | "Implemente os casos de uso UC01 (Cadastrar Item com upload de foto), UC05 (Solicitar Item) e UC06 (Responder Solicitação) seguindo rigorosamente as regras de negócio e fluxos alternativos do documento do projeto. Use DTOs para validação. No aceite de solicitação, use transação no PostgreSQL. Explique as decisões de modelagem e os fluxos alternativos implementados." |
+| 3 | **Front-end** | "Crie o frontend em React + Vite + React Router com as páginas necessárias para a Sprint 1 (login, cadastro, listagem/busca de itens, detalhes do item, cadastrar item, solicitações recebidas e minhas solicitações, área admin). Use context para autenticação com JWT. Faça a interface responsiva. Explique a estrutura de pastas e como o fluxo de autenticação funciona." |
+| 4 | **Testes** | "Escreva testes unitários e de integração (Jest + Supertest) cobrindo os services e os principais endpoints da Sprint 1. Use o repositório em memória. Foque nas regras de negócio e nos fluxos alternativos (FA01, FA02 etc.). Mostre a cobertura e explique o que cada suite está validando." |
+| 5 | **Infra / DevOps** | "Configure o projeto para rodar facilmente em GitHub Codespaces (devcontainer) e crie um Jenkinsfile que rode os testes do backend e o build do frontend em uma EC2 na AWS. Explique o pipeline e como configurar o webhook." |
