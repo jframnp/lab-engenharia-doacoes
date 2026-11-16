@@ -135,3 +135,17 @@ Instruções de setup da instância, do job e do webhook: [`docs/jenkins.md`](do
 - `feature/<id>-<descricao>`: uma branch por tarefa do Kanban (ex.: `feature/rf07-combinar-retirada`)
 - Commits no padrão [Conventional Commits](https://www.conventionalcommits.org/pt-br/): `feat:`, `fix:`, `docs:`, `test:`, `chore:`
 - Pull Request para `develop` com ao menos 1 revisão
+
+## Prompts utilizados (IA generativa)
+
+O projeto foi desenvolvido com apoio de uma ferramenta de IA (Claude Code). Esta seção registra os prompts usados, na ordem em que foram enviados, para dar transparência ao processo.
+
+| # | Etapa | Prompt |
+|---|---|---|
+| 1 | _(ex.: Back-end)_ | _cole aqui o prompt_ |
+| 2 | _(ex.: Front-end)_ | _cole aqui o prompt_ |
+| 3 | _(ex.: Testes)_ | _cole aqui o prompt_ |
+| 4 | _(ex.: Jenkins / CI)_ | _cole aqui o prompt_ |
+| 5 | _(ex.: Codespaces)_ | _cole aqui o prompt_ |
+
+> Todo o código gerado foi revisado e testado pelo grupo antes do commit.
