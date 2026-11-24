@@ -2,6 +2,13 @@
 
 Plataforma web que conecta **doadores** e **beneficiários** (pessoas físicas e ONGs) de uma comunidade local para doar itens em bom estado: roupas, móveis, eletrônicos, livros e outros.
 
+## Contexto e Caráter Extensionista
+
+O projeto **DPB: Doe Para O Bem** tem caráter extensionista ao atender uma necessidade real da comunidade local: famílias em situação de vulnerabilidade e ONGs que precisam de itens em bom estado (roupas, móveis, eletrônicos, livros e materiais escolares) muitas vezes esbarram em doações informais e desorganizadas em redes sociais ou grupos de mensagens[cite: 2, 15, 109].
+
+- **Público beneficiado:** Doadores da comunidade, beneficiários (pessoas físicas e ONGs) e instituições sociais locais[cite: 2, 15].
+- **Impacto social e sustentável:** Facilita o acesso a itens essenciais, reduz o desperdício/descarte de objetos ainda úteis e dá transparência ao processo por meio de aprovações, notificações e histórico[cite: 2, 15, 109].
+
 > Projeto da disciplina **Laboratório de Engenharia de Software**, Universidade Presbiteriana Mackenzie, 2026/2
 > **Grupo MackLee:** Camila Huang · Edson Fu · Felipe Hideki Rodrigues Shinozaki · João Francisco · Xuanjun Jin
 
@@ -95,12 +102,23 @@ npm run dev
 | `ong@dpb.com` | ONG **pendente** de aprovação |
 | `admin@dpb.com` | Administrador |
 
-### Testes
+## Documentação e Testes
 
+- **Documentação do projeto:** Disponível em [PROJERO-DPB.docx.pdf](https://github.com/user-attachments/files/35305601/PROJERO-DPB.docx.pdf)
+](docs/), contemplando definição da demanda, requisitos e backlog, wireframes, modelagem, arquitetura ([`docs/arquitetura.md`](docs/arquitetura.md)), casos de uso ([`docs/casos-de-uso.md`](docs/casos-de-uso.md)), Kanban ([`docs/kanban.md`](docs/kanban.md)), pipeline CI/CD ([`docs/jenkins.md`](docs/jenkins.md)) e documentação atualizada com os casos de teste.
+- **Códigos de teste automatizado:** Localizados em [`backend/tests/`](backend/tests/) (executados via `npm test` com Jest + Supertest).
+
+### Testes
 ```bash
 cd backend
 npm test        # Jest + Supertest, com relatório de cobertura
 ```
+### Manual de utilização (fluxo principal)
+
+1. **Acesso:** Faça login com uma das contas de demonstração (senha `123456`) ou cadastre um novo usuário em `/api/auth/registro` / tela de cadastro.
+2. **Aprovação de ONG (Administrador):** Entre como `admin@dpb.com`, acesse os cadastros pendentes (ex.: `ong@dpb.com`) e aprove ou rejeite com motivo.
+3. **Cadastro e busca de itens:** Entre como `doador@dpb.com` para cadastrar um item com foto; entre como `beneficiario@dpb.com` para buscar itens por categoria, cidade, bairro ou palavra-chave.
+4. **Solicitação e resposta:** O beneficiário solicita um item disponível e o doador aceita ou recusa em **Solicitações recebidas** (ao aceitar, o item é reservado e as demais solicitações pendentes são recusadas, disparando notificações).
 
 ## CI/CD (Jenkins na AWS)
 
