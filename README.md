@@ -104,8 +104,7 @@ npm run dev
 
 ## Documentação e Testes
 
-- **Documentação do projeto:** Disponível em [`PROJERO-DPB.docx.pdf`](PROJERO-DPB.docx.pdf)
-](docs/), contemplando definição da demanda, requisitos e backlog, wireframes, modelagem, arquitetura ([`docs/arquitetura.md`](docs/arquitetura.md)), casos de uso ([`docs/casos-de-uso.md`](docs/casos-de-uso.md)), Kanban ([`docs/kanban.md`](docs/kanban.md)), pipeline CI/CD ([`docs/jenkins.md`](docs/jenkins.md)) e documentação atualizada com os casos de teste.
+- **Documentação do projeto:** Disponível em [`PROJERO-DPB.docx.pdf`](PROJERO-DPB.docx.pdf) contemplando definição da demanda, requisitos e backlog, wireframes, modelagem, arquitetura ([`docs/arquitetura.md`](docs/arquitetura.md)), casos de uso ([`docs/casos-de-uso.md`](docs/casos-de-uso.md)), Kanban ([`docs/kanban.md`](docs/kanban.md)), pipeline CI/CD ([`docs/jenkins.md`](docs/jenkins.md)) e documentação atualizada com os casos de teste.
 - **Códigos de teste automatizado:** Localizados em [`backend/tests/`](backend/tests/) (executados via `npm test` com Jest + Supertest).
 
 ### Testes
